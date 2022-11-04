@@ -11,28 +11,56 @@
         }
 
         body{
-            background-color: #f1f1f1;
-        }
-
-        .container{
-            width: 100%;
+            background-color: #637394;
             height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+        }
+
+        .container{
+            width: 50%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            border: 3px solid #000;
             background-color: #fff;
             flex-direction: column;
+            padding: 20px;
+        }
+
+        .title{
+            font-size: 50px;
+            font-weight: 600;
+            margin-bottom: 20px;
         }
 
         .input{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             margin: 10px;
+            width: 100%;
         }
 
         form{
             display: flex;
             flex-direction: column;
-            width: 100%;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
             gap: 10px;
+        }
+
+        .input input{
+            width: 80%;
+            height: 30px;
+            border-radius: 5px;
+            border: 1px solid #000;
+            padding: 5px;
         }
     </style>
     <title>ContaCaratteri</title>
@@ -40,6 +68,7 @@
 <body>
     <div class="container">
         <div class="input">
+            <h1 class="title">Inserisci la frase</h1>
         <form action="index.php" method="post">
             <input type="text" name="stringa">
             <input type="submit" value="Invia">
@@ -103,8 +132,6 @@
                     echo "Numero di consonanti: " . $consonanti . "<br>";
                     echo "Numero di numeri: " . $numeri . "<br>";
                     echo "Numero di caratteri speciali: " . $caratteri . "<br>";    
-                } else {
-                    echo "Inserisci una frase";
                 }
             }
     
